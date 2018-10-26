@@ -20,4 +20,9 @@ class Lesson extends Model
     		'student_id'
     	);
     }
+
+    public function schedules()
+    {
+        return $this->hasMany(Schedule::class);
+    }
 }

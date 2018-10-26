@@ -37,6 +37,10 @@ class AuthController extends Controller
     public function me()
     {
         $user = JWTAuth::user();
+        if ($user->type == 1)
+            $user->lessons;
+        if ($user->type == 2)
+            $user->lead;
 
         return response()->json($user, 200);
     }

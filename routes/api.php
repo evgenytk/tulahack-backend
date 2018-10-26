@@ -22,4 +22,7 @@ Route::group(['middleware' => 'auth:api', 'prefix' => 'auth', 'namespace' => 'Ap
     Route::get('users/{userType}', 'UsersController@index');
 
     Route::get('lessons', 'LessonsController@index');
+    Route::get('schedules', 'SchedulesController@index');
+    Route::get('schedules/lesson/{lessonId}', 'SchedulesController@byLesson');
+    // Route::get('schedules/date/{dateString}', 'SchedulesController@byDate');
 });
