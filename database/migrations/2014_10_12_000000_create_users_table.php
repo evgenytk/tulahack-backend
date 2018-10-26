@@ -67,6 +67,11 @@ class CreateUsersTable extends Migration
             'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
         ]);
 
+
+
+
+
+
         DB::table('users')->insert([
             'first_name' => 'Анна',
             'last_name' => 'Логинова',
@@ -74,6 +79,12 @@ class CreateUsersTable extends Migration
             'type' => 3,
             'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
         ]);
+
+
+
+
+
+
 
         DB::table('users')->insert([
             'first_name' => 'Борис',

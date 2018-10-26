@@ -28,6 +28,11 @@ class User extends Authenticatable implements JWTSubject
         'password'
     ];
 
+    public function lesson()
+    {
+        return $this->hasOne(Lesson::class);
+    }
+
     /**
     * Add new record
     *

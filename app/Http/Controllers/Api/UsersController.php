@@ -9,8 +9,11 @@ use App\Http\Controllers\Controller;
 class UsersController extends Controller
 {
     public function index($userType)
-    {
-    	$users = User::where('type', $userType)->get();
+    {	
+    	if ($userType == 2)
+    		$users = User::where('type', $userType)->with('lesson')->get();
+    	else
+    		$users = User::where('type', $userType)->get();
 
     	return response()->json($users, 200);
     }

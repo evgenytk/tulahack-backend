@@ -20,6 +20,24 @@ class CreateLessonsTable extends Migration
             $table->text('description')->nullable();
             $table->timestamps();
         });
+
+        DB::table('lessons')->insert([
+            'user_id' => 7,
+            'title' => 'Web разработка',
+            'description' => 'Обучение современной веб разработке'
+        ]);
+
+        DB::table('lessons')->insert([
+            'user_id' => 8,
+            'title' => 'Desktop разработка',
+            'description' => 'Обучение разработке под ПО для настольных компьютеров'
+        ]);
+
+        DB::table('lessons')->insert([
+            'user_id' => 9,
+            'title' => 'Mobile разработка',
+            'description' => 'Обучение разработке под мобильные устройства iOS и Android'
+        ]);
     }
 
     /**
