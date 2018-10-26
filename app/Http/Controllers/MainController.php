@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function index()
     {
-    	$test = User::all();
+    	$test = User::find(11)->lead;
 
     	dd($test);
     }

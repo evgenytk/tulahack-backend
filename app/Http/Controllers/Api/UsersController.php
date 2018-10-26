@@ -11,15 +11,13 @@ class UsersController extends Controller
     public function index($userType)
     {	
     	if ($userType == 2)
-    		$users = User::where('type', $userType)->with('lesson')->get();
-    	else
-    		$users = User::where('type', $userType)->get();
+    		$users = User::where('type', $userType)->with('lead')->get();
+    	
+    	if ($userType == 1) 
+    		$users = User::where('type', $userType)->with('lessons')->get();
 
     	return response()->json($users, 200);
     }
 
-    public function me()
-    {
-    	# code...
-    }
+    
 }

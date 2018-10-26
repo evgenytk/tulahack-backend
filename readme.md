@@ -1,7 +1,21 @@
-POST /api/login - Метод авторизации
+## POST /api/login 
+Метод авторизации
+Параметры:
 - phone
 - password
 
-GET /api/auth/me - Метод получения информации о профиле
+## GET /api/auth/me
+Метод для получения информации о профиле
 
-GET /api/users/{userType} - Метод получения всех пользователей по типу
+## GET /api/auth/lessons
+Метод для получения предметов
+
+## GET /api/users/{userType}
+Метод для получения всех пользователей по типу
+Параметры
+- userType == 1 - Ученик
+- userType == 2 - Ученик
+- userType == 3 - Родитель
+
+
+

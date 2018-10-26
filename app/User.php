@@ -28,9 +28,19 @@ class User extends Authenticatable implements JWTSubject
         'password'
     ];
 
-    public function lesson()
+    public function lead()
     {
-        return $this->hasOne(Lesson::class);
+        return $this->hasOne(Lesson::class, 'teacher_id', 'id');
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(
+            Lesson::class,
+            'lesson_students',
+            'student_id',
+            'lesson_id'
+        );
     }
 
     /**

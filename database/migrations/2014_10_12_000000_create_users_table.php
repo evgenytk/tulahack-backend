@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -31,7 +32,9 @@ class CreateUsersTable extends Migration
             'last_name' => 'Слепаков',
             'phone' => '79000000001',
             'type' => 1,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
         DB::table('users')->insert([
@@ -39,7 +42,9 @@ class CreateUsersTable extends Migration
             'last_name' => 'Дорохов',
             'phone' => '79000000002',
             'type' => 1,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
         DB::table('users')->insert([
@@ -47,7 +52,9 @@ class CreateUsersTable extends Migration
             'last_name' => 'Шишелов',
             'phone' => '79000000003',
             'type' => 1,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
         DB::table('users')->insert([
@@ -55,7 +62,9 @@ class CreateUsersTable extends Migration
             'last_name' => 'Васильев',
             'phone' => '79000000004',
             'type' => 1,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
         DB::table('users')->insert([
@@ -63,22 +72,62 @@ class CreateUsersTable extends Migration
             'last_name' => 'Логинов',
             'phone' => '79000000005',
             'type' => 1,
-            'parent_id' => 6,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'parent_id' => 14,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
-
-
-
-
-
 
         DB::table('users')->insert([
-            'first_name' => 'Анна',
-            'last_name' => 'Логинова',
+            'first_name' => 'Алексей',
+            'last_name' => 'Ротманов',
             'phone' => '79000000006',
-            'type' => 3,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'type' => 1,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
+
+        DB::table('users')->insert([
+            'first_name' => 'Борис',
+            'last_name' => 'Метельников',
+            'phone' => '79000000007',
+            'type' => 1,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('users')->insert([
+            'first_name' => 'Максим',
+            'last_name' => 'Матвеев',
+            'phone' => '79000000008',
+            'type' => 1,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('users')->insert([
+            'first_name' => 'Артем',
+            'last_name' => 'Широков',
+            'phone' => '79000000009',
+            'type' => 1,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('users')->insert([
+            'first_name' => 'Олег',
+            'last_name' => 'Зеленцов',
+            'phone' => '79000000010',
+            'type' => 1,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
 
 
 
@@ -89,25 +138,47 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert([
             'first_name' => 'Борис',
             'last_name' => 'Никифоров',
-            'phone' => '79000000007',
+            'phone' => '79000000012',
             'type' => 2,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
         DB::table('users')->insert([
             'first_name' => 'Аркадий',
             'last_name' => 'Носонов',
-            'phone' => '79000000008',
+            'phone' => '79000000013',
             'type' => 2,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
         DB::table('users')->insert([
             'first_name' => 'Никита',
             'last_name' => 'Прохоров',
-            'phone' => '79000000009',
+            'phone' => '79000000014',
             'type' => 2,
-            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma' //secret
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+
+
+
+
+
+
+        DB::table('users')->insert([
+            'first_name' => 'Анна',
+            'last_name' => 'Логинова',
+            'phone' => '79000000011',
+            'type' => 3,
+            'password' => '$2a$04$pyEABsuWZEtl/d5QlA.0fuo3sSRyDGfynk1ijwkjUt/kgXniirHma',
+            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
     }
 
