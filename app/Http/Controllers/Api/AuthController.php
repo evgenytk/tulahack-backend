@@ -76,6 +76,11 @@ class AuthController extends Controller
      */
     protected function respondWithToken($token, User $user)
     {
+        if ($user->type == 1)
+            $user->lessons;
+        if ($user->type == 2)
+            $user->lead;
+        
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
