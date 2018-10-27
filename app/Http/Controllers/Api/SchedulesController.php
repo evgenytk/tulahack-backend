@@ -10,7 +10,7 @@ class SchedulesController extends Controller
 {
     public function index()
     {
-    	$schedules = Schedule::with('lesson')->orderBy('start_date')->get()->groupBy(function($item) {
+    	$schedules = Schedule::with('lesson.teacher')->orderBy('start_date')->get()->groupBy(function($item) {
             return \Carbon\Carbon::parse($item->start_date)->format('d.m.y');
         });
 
