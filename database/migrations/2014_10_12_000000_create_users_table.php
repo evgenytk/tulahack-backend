@@ -32,7 +32,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Слепаков',
             'phone' => '79000000001',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -42,7 +42,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Дорохов',
             'phone' => '79000000002',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -52,7 +52,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Шишелов',
             'phone' => '79000000003',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -62,7 +62,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Васильев',
             'phone' => '79000000004',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -73,7 +73,7 @@ class CreateUsersTable extends Migration
             'phone' => '79000000005',
             'type' => 1,
             'parent_id' => 14,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -83,7 +83,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Ротманов',
             'phone' => '79000000006',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -93,7 +93,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Метельников',
             'phone' => '79000000007',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -103,7 +103,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Матвеев',
             'phone' => '79000000008',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -113,7 +113,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Широков',
             'phone' => '79000000009',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -123,7 +123,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Зеленцов',
             'phone' => '79000000010',
             'type' => 1,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -140,7 +140,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Никифоров',
             'phone' => '79000000012',
             'type' => 2,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -150,7 +150,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Носонов',
             'phone' => '79000000013',
             'type' => 2,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -160,7 +160,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Прохоров',
             'phone' => '79000000014',
             'type' => 2,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -176,7 +176,7 @@ class CreateUsersTable extends Migration
             'last_name' => 'Логинова',
             'phone' => '79000000011',
             'type' => 3,
-            'password' => bcrypt('secret'),
+            'password' => \Hash::make('secret'),
             'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
         ]);

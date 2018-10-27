@@ -11,7 +11,9 @@ class MainController extends Controller
 {
     public function index()
     {
-    	$test = bcrypt('secret');
+    	$user = User::first();
+
+    	$test = \Hash::check('secret', $user->password);
     	// $test = Schedule::first();
 
     	dd($test);
