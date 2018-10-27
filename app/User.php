@@ -28,6 +28,29 @@ class User extends Authenticatable implements JWTSubject
         'password'
     ];
 
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['type_name'];
+
+    /**
+     * Get product quantity attribute by current store
+     *
+     * @return ProductQuantity
+     */
+    public function getTypeNameAttribute()
+    {
+        if ($this->type == 3)
+            return 'Родитель';
+
+        if ($this->type == 2)
+            return 'Преподаватель';
+        
+        return 'Ученик';
+    }
+
     public function lead()
     {
         return $this->hasOne(Lesson::class, 'teacher_id', 'id');
