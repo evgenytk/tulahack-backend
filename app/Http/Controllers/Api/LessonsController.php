@@ -12,8 +12,8 @@ class LessonsController extends Controller
 {
     public function index()
     {
-    	$user = User::where('id', JWTAuth::user()->id)->with('lessons.schedules')->with('lessons.teacher')->get()->first();
+    	$lessons = Lesson::with('students')->with('teacher')->get();
 
-    	return response()->json($user->lessons, 200);
+    	return response()->json($lessons, 200);
     }
 }
