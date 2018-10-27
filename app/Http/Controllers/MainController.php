@@ -11,8 +11,9 @@ class MainController extends Controller
 {
     public function index()
     {
-    	$test = Schedule::first();
+    	$test = bcrypt('secret');
+    	// $test = Schedule::first();
 
-    	dd($test->lesson);
+    	dd($test);
     }
 }
