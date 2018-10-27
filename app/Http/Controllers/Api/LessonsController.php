@@ -12,7 +12,7 @@ class LessonsController extends Controller
 {
     public function index()
     {
-    	$user = User::where('id', JWTAuth::user()->id)->with('lessons.schedules')->get()->first();
+    	$user = User::where('id', JWTAuth::user()->id)->with('lessons.schedules')->with('lessons.teacher')->get()->first();
 
     	return response()->json($user->lessons, 200);
     }
