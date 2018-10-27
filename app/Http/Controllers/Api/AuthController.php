@@ -22,7 +22,7 @@ class AuthController extends Controller
                     ->get()
                     ->first();
 
-        if (!$user || \Hash::check($request->get('password'), $user->password) || !$token = JWTAuth::fromUser($user)) {
+        if (!$user || !\Hash::check($request->get('password'), $user->password) || !$token = JWTAuth::fromUser($user)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
