@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\User;
+use JWTAuth;
 use App\Lesson;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,8 +12,8 @@ class LessonsController extends Controller
 {
     public function index()
     {
-    	$lessons = Lesson::with('teacher')->with('students')->get();
+    	$user = User::where('id', JWTAuth::user()->id)->with('lessons.schedules')->get()->first();
 
-    	return response()->json($lessons, 200);
+    	return response()->json($user->lessons, 200);
     }
 }

@@ -35,11 +35,6 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $appends = ['type_name'];
 
-    /**
-     * Get product quantity attribute by current store
-     *
-     * @return ProductQuantity
-     */
     public function getTypeNameAttribute()
     {
         if ($this->type == 3)
