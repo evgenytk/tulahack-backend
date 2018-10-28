@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth:api', 'prefix' => 'auth', 'namespace' => 'Ap
     Route::get('me', 'AuthController@me');
     Route::get('users/{userType}', 'UsersController@index');
 
+    Route::get('news', 'NewsController@index');
     Route::get('lessons', 'LessonsController@index');
     Route::get('schedules', 'SchedulesController@index');
     Route::get('schedules/lesson/{lessonId}', 'SchedulesController@byLesson');
